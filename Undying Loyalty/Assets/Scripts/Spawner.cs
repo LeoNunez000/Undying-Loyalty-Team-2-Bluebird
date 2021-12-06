@@ -5,6 +5,9 @@ using UnityEngine;
 public class Spawner : MonoBehaviour
 {
     [SerializeField] private GameObject prefab;
+    [SerializeField] bool disableOnTrigger = true;
+
+    bool triggerActive = true;
 
     // Start is called before the first frame update
     void Start()
