@@ -3084,7 +3084,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 2.09, y: 1.6, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1117898305
 MeshRenderer:
@@ -3143,7 +3143,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1117898302}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.4956508, y: -0.106082916, z: 18.58734}
+  m_LocalPosition: {x: 0, y: -0.106082916, z: 18.58734}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
