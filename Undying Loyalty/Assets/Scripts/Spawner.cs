@@ -6,25 +6,35 @@ public class Spawner : MonoBehaviour
 {
     [SerializeField] private GameObject prefab;
     [SerializeField] bool disableOnTrigger = true;
+    [SerializeField] Transform spawnPoint;
 
     bool triggerActive = true;
+    GameObject canActivate;
 
-    // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
+      canActivate = GameObject.FindGameObjectWithTag("Player");
     }
 
       void OnTriggerEnter(Collider other)
         {
-            Debug.Log("its working");
-            Instantiate (prefab, transform.position,transform.rotation);
-        }    
+            if(triggerActive && other.gameObject == canActivate)
+            {
+        
+              Instantiate (prefab, spawnPoint.position,transform.rotation);
+              if(disableOnTrigger)
+              {triggerActive = false;}
+            } 
+            
+        }   
+
+         private void OnDrawGizmos()
+        {
+          Gizmos.color = Color.red;
+          Gizmos.DrawSphere (transform.position,1f);
+          Gizmos.color = Color.cyan;
+          Gizmos.DrawSphere (spawnPoint.position,1f);
+
+        } 
        
 }
